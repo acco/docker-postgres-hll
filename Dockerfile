@@ -1,11 +1,8 @@
-ARG psversion=11
+ARG psversion=14
 
 FROM postgres:$psversion
 
-MAINTAINER Vishnu Nair <me@vishnudxb.me>
-
 ENV POSTGRES_USER postgres
-
 ENV POSTGRES_PASSWORD postgres
 
 RUN apt-get update -y && apt-get install -y postgresql-server-dev-${PG_MAJOR} make gcc g++ git
